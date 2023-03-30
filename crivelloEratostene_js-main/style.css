@@ -1,0 +1,50 @@
+.contenitore {
+    background-color: bisque;
+}
+
+#num {
+    width: 100%;
+}
+
+.formNumero {
+    padding: 10px 10px 10px 10px;
+}
+
+.box_button {
+    margin-top: 10px;
+}
+
+.sbox {
+    padding: 0px 10px 0px 10px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(10, minmax(50px, 1fr));
+    gap: 15px;
+}
+
+.box {
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 2px 5px 2px 5px;
+    text-align: center;
+}
+
+.boxNoPrimi {
+    border: 1px solid black;
+    background-color: rgb(221, 223, 217);
+}
+
+.boxPrimi {
+    border: 1px solid black;
+    background-color: rgb(12, 214, 157);
+}
+
+[data-id="1"] {
+    border: 1px solid black;
+    background-color: rgb(12, 214, 157);
+}
+
+[data-id="2"] {
+    border: 1px solid black;
+    background-color: rgb(12, 214, 157);
+}
