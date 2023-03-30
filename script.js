@@ -82,7 +82,7 @@ async function onClick() {
 	alert("Calcolo Completato");
 }
 
-function Reset() {
+function resetPage() {
 	removeAllNumbersDiv();
 	const text = document.getElementById("num");
 	text.value = null;
