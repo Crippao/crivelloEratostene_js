@@ -17,8 +17,6 @@ async function OnClick() {
 		array.push(i);
 		const div = document.createElement("div");
 
-		// div.setAttribute("id", `div${i}`);
-
 		div.setAttribute("data-id", i);
 		div.classList.add("box");
 		div.innerText = array[i];
@@ -34,11 +32,10 @@ async function OnClick() {
 	for (i = 2; i < Math.sqrt(n); i++) {
 		if (array[i] === 0) continue;
 		for (j = i + 1; j <= n; j++) {
-			const elementoCorrente = getDefaultDiv(j); //document.querySelector(`[data-id="${j}"]`);
-			// const elemento = document.getElementById(`div${j}`);
+			const elementoCorrente = getDefaultDiv(j);
 			if (array[j] % array[i] === 0) {
 				if (c) {
-					const elem = getDefaultDiv(0); //document.getElementById("div0");
+					const elem = getDefaultDiv(0);
 					elem.style.display = "none";
 					elementoCorrente.style.display = "none";
 				}
