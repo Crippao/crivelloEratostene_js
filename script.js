@@ -3,7 +3,11 @@ async function OnClick() {
 	div.innerHTML = "";
 
 	const num = document.getElementById("num");
-	const n = num.value;
+	const n = Number.parseInt(num.value);
+	if (isNaN(n)) {
+		alert("Inserisci un valore");
+		return;
+	}
 
 	const array = [];
 
@@ -13,7 +17,7 @@ async function OnClick() {
 		const div = document.createElement("div");
 		div.setAttribute("id", `div${i}`);
 		div.setAttribute("data-id", i);
-		div.classList.add("box", "boxNoPrimi");
+		div.classList.add("box");
 		div.innerText = array[i];
 		elemento.appendChild(div);
 	}
@@ -21,6 +25,8 @@ async function OnClick() {
 	const check = document.getElementById("onlyPrimi");
 	const c = check.checked;
 
+	// è stata inserita la radice quadrata perchè è necessario controllare i multipli solo fino
+	// alla metà del numero stesso
 	for (i = 2; i < Math.sqrt(n); i++) {
 		if (array[i] === 0) continue;
 		for (j = i + 1; j <= n; j++) {
@@ -47,7 +53,7 @@ async function OnClick() {
 }
 
 function Delay() {
-	return new Promise((res) => setTimeout(res, 10));
+	return new Promise((res) => setTimeout(res, 20));
 }
 
 function Reset() {
